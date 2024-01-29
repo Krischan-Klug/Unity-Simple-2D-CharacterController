@@ -46,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
                 stopMoving = false;
                 rb.velocity = Movement.normalized * speed;
 				
-				//animation 
-				animator.SetFloat("moveY", MoveY);
+		//animation 
+		animator.SetFloat("moveY", MoveY);
                 animator.SetFloat("moveX", MoveX);
                 animator.SetBool("moving", true);
 
@@ -65,11 +65,11 @@ public class PlayerMovement : MonoBehaviour
         if (Movement == Vector2.zero && stopMoving == false)
         {
 
-            stopMoving = true;           
-            rb.velocity = Vector2.zero;
+        	stopMoving = true;           
+            	rb.velocity = Vector2.zero;
 			
-			//animation
-			animator.SetBool("moving", false);
+		//animation
+		animator.SetBool("moving", false);
            
         }
     }
