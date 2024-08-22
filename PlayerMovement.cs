@@ -14,12 +14,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isDead = false;
 
     private Rigidbody2D rb;
-    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -46,10 +44,6 @@ public class PlayerMovement : MonoBehaviour
                 stopMoving = false;
                 rb.velocity = Movement.normalized * speed;
 				
-		//animation 
-		animator.SetFloat("moveY", MoveY);
-                animator.SetFloat("moveX", MoveX);
-                animator.SetBool("moving", true);
 
             }
 
@@ -67,9 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         	stopMoving = true;           
             	rb.velocity = Vector2.zero;
-			
-		//animation
-		animator.SetBool("moving", false);
+
            
         }
     }
